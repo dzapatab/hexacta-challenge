@@ -94,8 +94,8 @@ Installation 🔧
 ________
 Execution 💻
 The project can be executed from : src/test/java/com/hexacta/runners/RunnerTest.java
-Tags web: @web
-Tags services: tags = @services @GetUsers @GetAnUser @DeleteUser @CreateUser @ModifyUser
++ Tags web: @web
++ Tags services: tags = @services @GetUsers @GetAnUser @DeleteUser @CreateUser @ModifyUser
 
 or
 
