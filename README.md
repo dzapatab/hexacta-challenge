@@ -1,11 +1,12 @@
 <em> # Automation challenge Hexacta </em>
 Introduction 🚀
-Automation made for a challenge, with transactions to call API.
+Automation made for a challenge, with transactions to call API And Hexacta Web
 
 + A file is attached showing the operation of the cases and some notes. Evidence execution of test cases
 
 * This challenge is created to consume through the GET , POST , DELETE  and PUT methods the service https://reqres.in
-and validate different answers that it can answer.
+and validate different answers that it can answer. The Hexacta website is also automated https://www.hexacta.com/
+
 
 + For the POST method, 2 business rules were created because the api does not have many controls
 ```
@@ -57,6 +58,25 @@ Feature: Make request to a service
       |valid          |200         |
       |withoutJobParam|200         |
 ```
+
++ The header options are automated and the About Us form is filled out with different test cases
+
+```
+@web
+Feature: Hexacta
+
+  Scenario Outline: Interaction with the hexacta page
+    Given Navigate in the page Hexacta
+    When Send "<dataType>" data in let´s work together
+    Then Checks if the message for the "<dataType>" is valid
+
+    Examples:
+      | dataType                              |
+      | missingAllInformation                 |
+      | validUser                             |
+      | userWithoutCompany                    |
+      | userWithEmailInvalidAndWithoutCompany |
+```
 ________
 Pre requirements to execute 📋
 + Java version 17, update 17.0.2 or higher and JDK (environment variables configured).
@@ -67,21 +87,21 @@ Pre requirements to execute 📋
 
 ________
 Installation 🔧
-+ To clone this repository locally, the following command must be run: git clone "" or download with ZIP
++ To clone this repository locally, the following command must be run: git clone "https://github.com/dzapatab/hexacta-challenge" or download with ZIP
 + Import the project from Eclipse or IntelliJ IDE.
 + Configure the encoding to UTF-8 to the project once it is imported.
 + Compile the project with the command mvn compile and mvn clean or use the plugin compiler in the IDE 🔨
 ________
 Execution 💻
-The project can be executed from : src/test/java/com/hexacta/runners/Runner.java
+The project can be executed from : src/test/java/com/hexacta/runners/RunnerTest.java
 Tags web: @web
 Tags services: tags = @services @GetUsers @GetAnUser @DeleteUser @CreateUser @ModifyUser
 
 or
 
 Command Line:
-mvn clean test -D"cucumber.filter.tags=@services"
-mvn clean test -D"cucumber.filter.tags=@web"
++ mvn clean test -D"cucumber.filter.tags=@services"
++ mvn clean test -D"cucumber.filter.tags=@web"
 ________
 Create Serenity report 📋
 + User the plugin serenity:aggregate 
@@ -117,7 +137,7 @@ Project structure 🚧
 + utils
     Classes that contain common functionalities.
 
-\## src/test/java/com/lulobank/  
+\## src/test/java/com/hexacta/  
 
 + runners
     Classes to run automation with the scenarios indicated in the feature.
