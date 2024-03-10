@@ -17,7 +17,6 @@ public class CreateUserDataFactory {
     public static final String MESSAGE = "Hello, I´m ".concat(NAME_USER + " " + LAST_NAME_USER).concat(" of de company ".concat(COMPANY).concat(" this is mi email: ").concat(EMAIL_USER));
     public static final String JOB = String.valueOf(FAKER.job().position());
 
-
     public static CreateUserRequest missingAllInformation(){
         return aUser()
                 .withName(StringUtils.EMPTY)

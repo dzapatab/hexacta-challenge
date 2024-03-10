@@ -30,5 +30,4 @@ public class AboutUs {
             .locatedBy("//input[@value='Send']");
     public static final Target YOUR_MESSAGE = Target.the("about us YOUR MESSAGE")
             .locatedBy("//textarea[@placeholder='YOUR MESSAGE']");
-
 }

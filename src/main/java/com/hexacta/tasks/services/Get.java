@@ -1,12 +1,9 @@
 package com.hexacta.tasks.services;
 
-//import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
-//import net.thucydides.core.annotations.Step;
-
 import static com.hexacta.factory.CreateUserDataFactory.RANDOM_ID;
 import static com.hexacta.utils.enums.GenericEnums.MINUS_SYMBOL;
 import static com.hexacta.utils.enums.GenericEnums.USER_WITH_ID_INVALID;

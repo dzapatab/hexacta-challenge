@@ -6,7 +6,6 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-
 import static com.hexacta.userinterfaces.AboutUs.*;
 import static com.hexacta.utils.enums.GenericEnums.USER_WITH_EMAIL_INVALID_AND_WITHOUT_COMPANY;
 import static com.hexacta.utils.enums.GenericEnums.VALID_USER;
@@ -30,7 +29,6 @@ public class SendDataLetsWorkTogether implements Task {
         if(!VALID_USER.getValue().equals(dataType) && !USER_WITH_EMAIL_INVALID_AND_WITHOUT_COMPANY.getValue().equals(dataType)){
             actor.attemptsTo(Click.on(SEND_BUTTON));
         }
-
     }
 
     public static SendDataLetsWorkTogether inTheForm(CreateUserRequest createUserRequest) {

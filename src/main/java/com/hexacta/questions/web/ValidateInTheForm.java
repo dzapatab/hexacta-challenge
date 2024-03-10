@@ -1,11 +1,8 @@
 package com.hexacta.questions.web;
 
-//import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.actions.Click;
-//import net.thucydides.core.annotations.Step;
-
 import static com.hexacta.interactions.Wait.checkElementState;
 import static com.hexacta.interactions.Wait.waitTheElement;
 import static com.hexacta.userinterfaces.AboutUs.*;

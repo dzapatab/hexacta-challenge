@@ -37,5 +37,4 @@ public class HeaderOption implements Task {
         return Tasks.instrumented(HeaderOption.class, headerOption);
     }
 
-
 }
