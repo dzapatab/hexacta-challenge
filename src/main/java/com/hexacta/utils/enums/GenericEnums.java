@@ -8,6 +8,7 @@ import java.util.EmptyStackException;
 @Getter
 @AllArgsConstructor
 public enum GenericEnums {
+    ALL("all "),
     IS_PRESENT("isPresent"),
     IS_NOT_PRESENT("isNotPresent"),
     INVALID_VALUE("Please complete this mandatory field."),
@@ -17,8 +18,10 @@ public enum GenericEnums {
     HEXACTA_URL("hexacta.url"),
     NULL_INFORMATION("nullInformation"),
     NOT_FOUND("Not Found"),
+    PAGE("page"),
     VALID_USER("validUser"),
     SUCCESS("To keep ReqRes free, contributions towards server costs are appreciated!"),
+    TWO_STRING("2"),
     USER_WITHOUT_COMPANY("userWithoutCompany"),
     USER_VALID("valid"),
     USER_WITHOUT_JOB("jobEmpty"),

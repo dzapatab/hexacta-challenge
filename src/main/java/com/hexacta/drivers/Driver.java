@@ -9,11 +9,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class Driver {
 
     public static WebDriver driver;
-
+//,"--headless=new"
     public static Driver web(){
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized", "--incognito","--headless=new");
+        options.addArguments("--start-maximized", "--incognito");
         driver = new ChromeDriver(options);
         return new Driver();
     }

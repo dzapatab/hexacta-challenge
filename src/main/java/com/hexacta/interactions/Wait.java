@@ -17,7 +17,7 @@ import static com.hexacta.utils.enums.GenericEnums.IS_PRESENT;
 
 public class Wait implements Interaction {
     private final Target element;
-    private long atMostSeconds = 15L;
+    private long atMostSeconds = 30L;
     private long pollIntervalSeconds = 1L;
     private String expectedState;
 

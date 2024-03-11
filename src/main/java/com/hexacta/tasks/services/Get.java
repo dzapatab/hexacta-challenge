@@ -5,8 +5,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import static com.hexacta.factory.CreateUserDataFactory.RANDOM_ID;
-import static com.hexacta.utils.enums.GenericEnums.MINUS_SYMBOL;
-import static com.hexacta.utils.enums.GenericEnums.USER_WITH_ID_INVALID;
+import static com.hexacta.utils.enums.GenericEnums.*;
 import static net.serenitybdd.rest.SerenityRest.given;
 
 public class Get implements Task {
@@ -24,8 +23,8 @@ public class Get implements Task {
     public <T extends Actor> void performAs(T actor) {
         if (!"users".equals(resourceApi)) {
             given().with()
-                    .queryParam("page", "2").
-                    and().when().get(resourceApi.replaceAll("all ",""))
+                    .queryParam(PAGE.getValue(), TWO_STRING.getValue()).
+                    and().when().get(resourceApi.replaceAll(ALL.getValue(),""))
                     .then().extract().response();
         } else {
 
