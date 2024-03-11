@@ -2,7 +2,7 @@ package com.hexacta.userinterfaces;
 
 import net.serenitybdd.screenplay.targets.Target;
 
-public class HomePage {
+public class Home {
 
     public static final Target CLOSE_IMAGE = Target.the("home CLOSE IMAGE")
             .locatedBy("//span[@aria-label='close']");

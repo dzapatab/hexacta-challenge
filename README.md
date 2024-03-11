@@ -1,6 +1,6 @@
 <em> # Automation challenge Hexacta </em>
 Introduction 🚀
-Automation made for a challenge, with transactions to call API And Hexacta Web
+Automation made for a challenge, with transactions to call API And Hexacta Web with Page Object Model and Screenplay
 
 + A file is attached showing the operation of the cases and some notes. Evidence execution of test cases
 
@@ -63,12 +63,26 @@ Feature: Make request to a service
 
 ```
 @web
-Feature: Hexacta
+Feature: Hexacta Web
 
+  @screenplay
   Scenario Outline: Interaction with the hexacta page
     Given Navigate in the page Hexacta
     When Send "<dataType>" data in let´s work together
     Then Checks if the message for the "<dataType>" is valid
+
+    Examples:
+      | dataType                              |
+      | missingAllInformation                 |
+      | validUser                             |
+      | userWithoutCompany                    |
+      | userWithEmailInvalidAndWithoutCompany |
+
+    @page_object
+  Scenario Outline: Interaction with the hexacta page with page object model
+    Given Navigate in the page Hexacta
+    When Send "<dataType>" data in let´s work together with page object model
+    Then Checks if the message for the "<dataType>" is valid with page object model
 
     Examples:
       | dataType                              |
@@ -89,19 +103,19 @@ ________
 Installation 🔧
 + To clone this repository locally, the following command must be run: git clone "https://github.com/dzapatab/hexacta-challenge" or download with ZIP
 + Import the project from Eclipse or IntelliJ IDE.
-+ Configure the encoding to UTF-8 to the project once it is imported.
 + Compile the project with the command mvn compile and mvn clean or use the plugin compiler in the IDE 🔨
 ________
 Execution 💻
 The project can be executed from : src/test/java/com/hexacta/runners/RunnerTest.java
-+ Tags web: @web
++ Tags web: @web @screenplay @page_object
 + Tags services: tags = @services @GetUsers @GetAnUser @DeleteUser @CreateUser @ModifyUser
 
 or
 
 Command Line:
 + mvn clean test -D"cucumber.filter.tags=@services"
-+ mvn clean test -D"cucumber.filter.tags=@web"
++ mvn clean test -D"cucumber.filter.tags=@screenplay"
++ mvn clean test -D"cucumber.filter.tags=@page_object"
 ________
 Create Serenity report 📋
 + User the plugin serenity:aggregate 
@@ -121,6 +135,12 @@ Project structure 🚧
 
 + drivers
     Classes instantiate browsers
+
++ pages
+    Classes implementation for page object model methods
+
++ tests
+    Classes implementation for validate test of page object model
 
 + questions
     Classes with which values are obtained and then verified in the stepdefinitions (asserts).
@@ -155,7 +175,9 @@ Automation was developed with:
 
 + BDD - Development strategy
 + Screenplay - Design pattern
++ Page Object Model - Design pattern
 + Maven - Dependency manager
++ Junit - JUnit is a unit testing framework for Java that simplifies the creation, execution, and analysis of automated tests, ensuring software   quality by verifying specific units of code.
 + Cucumber7 - Is a software tool that supports behavior-driven development
 + Serenity BDD - open source library that helps write higher quality automated acceptance tests more efficiently
 + Gherkin - Business Readable DSL Language (Business-readable domain specific language)

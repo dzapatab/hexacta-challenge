@@ -7,8 +7,8 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.MoveMouse;
 
 import static com.hexacta.interactions.Wait.waitTheElement;
-import static com.hexacta.userinterfaces.HomePage.HEADER_OPTIONS;
-import static com.hexacta.userinterfaces.HomePage.SELECT_OPTIONS_IN_THE_HEADER;
+import static com.hexacta.userinterfaces.Home.HEADER_OPTIONS;
+import static com.hexacta.userinterfaces.Home.SELECT_OPTIONS_IN_THE_HEADER;
 import static com.hexacta.utils.enums.GenericEnums.IS_PRESENT;
 
 public class HeaderOption implements Task {

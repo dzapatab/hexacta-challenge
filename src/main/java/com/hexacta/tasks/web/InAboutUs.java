@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import static com.hexacta.interactions.Wait.waitTheElement;
 import static com.hexacta.tasks.web.HeaderOption.selectHeaderOption;
-import static com.hexacta.userinterfaces.HomePage.CLOSE_IMAGE;
+import static com.hexacta.userinterfaces.Home.CLOSE_IMAGE;
 import static com.hexacta.utils.enums.GenericEnums.IS_PRESENT;
 import static com.hexacta.utils.enums.OptionsHeader.ABOUT_US;
 import static com.hexacta.utils.enums.OptionsHeader.COMPANY;
