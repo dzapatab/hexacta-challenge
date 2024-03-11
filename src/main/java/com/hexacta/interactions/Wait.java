@@ -49,7 +49,8 @@ public class Wait implements Interaction {
             } catch (ElementShouldBePresentException | IllegalArgumentException | NoSuchElementException var4) {
                 return false;
             }
-        });
+        }
+        );
     }
 
     public Wait forAtMost(long atMostSeconds) {
