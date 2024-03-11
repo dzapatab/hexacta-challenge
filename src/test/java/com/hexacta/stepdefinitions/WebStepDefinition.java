@@ -28,7 +28,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class HexactaStepDefinition {
+public class WebStepDefinition {
 
     @Given("Navigate in the page Hexacta")
     public void navigateInThePageHexacta() {
