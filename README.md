@@ -189,7 +189,8 @@ Automation was developed with:
 ________
 Versioning 📌
 Git was used for version control, applying GitFlow 🔀
-
++ main
++ feature/hexacta_and_global_logic
 
 ________
 Thanks !!
